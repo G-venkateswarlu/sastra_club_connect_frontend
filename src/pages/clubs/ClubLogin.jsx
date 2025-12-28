@@ -14,8 +14,6 @@ const ClubLogin = () => {
   const [password, setPassword] = useState("");
 
  const loginHandler = async (e) => {
-  console.log(import.meta.env);
-console.log(import.meta.env.VITE_API_BASE_URL);
 
   
     e.preventDefault();
@@ -110,3 +108,4 @@ console.log(import.meta.env.VITE_API_BASE_URL);
 };
 
 export default ClubLogin;
+
