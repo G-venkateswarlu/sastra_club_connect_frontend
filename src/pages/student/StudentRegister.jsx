@@ -4,6 +4,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import axios from "axios";
 import { toast } from "react-toastify";
 
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
 const StudentRegister = () => {
   const [formData, setFormData] = useState({
@@ -31,7 +32,7 @@ const StudentRegister = () => {
       if (photo) {
         data.append("profilepic", photo);
       }
-      const res=await axios.post(`http://localhost:5000/api/auth/student/register`,
+      const res=await axios.post(`${apiBaseUrl}/api/auth/student/register`,
         data,
         { withCredentials: true });
   
@@ -150,3 +151,4 @@ const StudentRegister = () => {
 };
 
 export default StudentRegister;
+
