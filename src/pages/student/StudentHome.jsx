@@ -6,7 +6,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import Clubinfo from "./Clubinfo";
-import Postblog from "./Postblog";
+import Postblog from "./PostBlog";
 import FullBlogView from "./FullBlogcard";
 import AllBlogs from "./AllBlogs";
 
@@ -327,4 +327,5 @@ const StudentHome = () => {
 };
 
 export default StudentHome;
+
 
