@@ -4,7 +4,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { toast } from "react-toastify";
 import axios from "axios";
 
-
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
 const StudentLogin = () => {
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ const StudentLogin = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `http://localhost:5000/api/auth/student/login`,
+        `${apiBaseUrl}/api/auth/student/login`,
         { email, password },
         { withCredentials: true }
       );
@@ -109,3 +109,4 @@ const StudentLogin = () => {
 };
 
 export default StudentLogin;
+
